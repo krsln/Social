@@ -1,0 +1,121 @@
+<div class="Container">
+  <div class="Row">
+
+    <div class="Col-12 Col-lg-8 P-1">
+
+      <!--      Profile Card-->
+      <div class="Card MB-2">
+        <div class="Card-body">
+          <div class="Row">
+            <div class="Col-12 Col-lg-8 Col-md-6">
+              <h3 class="MB-0 text-truncated">{{ Entity.Name }}</h3>
+              <p class="lead">Internet service provider company</p>
+              <p>{{ Entity.Desc }}</p>
+            </div>
+            <div class="Col-12 Col-lg-4 Col-md-6 Text-center">
+              <img
+                src="data:image/png;base64,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"
+                alt="" class="MX-auto Rounded-circle Img-fluid">
+              <br>
+              <div class="Rating MB-2">
+                @for (i of [1, 2, 3, 4, 5]; track $index) {
+                  <div class="Square">
+                    <div class="Centered" [class.Selected]="i<4">
+                      <i class="fa-solid fa-star fa-spin"></i>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+            <div class="Col-12 Col-lg-4">
+              <h3 class="MB-0">20.7K</h3>
+              <small>Followers</small>
+              <button class="Btn Btn-sm Btn-outline Btn-success"><span class="fa fa-plus-circle"></span> Follow</button>
+            </div>
+            <div class="Col-12 Col-lg-4">
+              <h3 class="MB-0">245</h3>
+              <small>5562562</small>
+              <button class="Btn Btn-sm Btn-outline Btn-info"><span class="fa fa-user"></span> View</button>
+            </div>
+            <div class="Col-12 Col-lg-4">
+              <h3 class="MB-0">43</h3>
+              <small>Snippets</small>
+              <button type="button" class="Btn Btn-sm Btn-outline Btn-primary"><span class="fa fa-gear"></span> Options
+              </button>
+            </div>
+            <!--/Col-->
+          </div>
+          <!--/row-->
+        </div>
+        <!--/card-block-->
+      </div>
+
+      <!--      Case Card-->
+      <div class="Card MB-2">
+        <div class="Card-body P-2 PB-1">
+          <h6 class="Card-title" [routerLink]="'/News/Detective/'+Case.User.UniqueName">
+            <img class="Rounded-circle" width="50" [src]="Case.User.Avatar" [alt]="Case.User.Name">
+            &nbsp;<b>{{ Case.User.Name }}</b>
+            &nbsp;<span>{{ Case.CreatedAt|date }}</span>
+          </h6>
+          <div class="P-0" [routerLink]="'/News/Case/1'">
+            <div class="Row">
+              <div class="Col-12 MB-1">
+                <h5>{{ Case.Title }}</h5>
+              </div>
+              @for (thesis of Case.Theses; track $index) {
+                <div class="Col-12 Col-md-6 MB-1">
+                  <div class="PS-1 Border-start" style="border-width: 5px !important"
+                       [class.Bc-danger]="thesis.Proposition===0"
+                       [class.Bc-success]="thesis.Proposition===1">
+                    @if (thesis.Type === 0) {
+                      <span class="Bg-light">{{ thesis.Content }}</span>
+                    }
+                    @if (thesis.Type === 1) {
+                      <img class="Img-fluid " [src]="thesis.Content" [alt]="thesis.Proposition">
+                    }
+                  </div>
+                </div>
+              }
+              <div class="Col-12 MB-1">
+                <div class="Border-top Bc-dark">
+                  <span>comments (235) | likes (15615) | share (53)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="Col-12 Col-lg-4 P-1">
+
+      <div class="Card Card-body MB-2">
+        <p>sign up!</p>
+      </div>
+
+      <div class="Card MB-2">
+        <div class="Card-body">
+          <p>entity works! profile page of liar</p>
+
+          <br>left image
+          <br>right rates
+          <br> feeds
+        </div>
+      </div>
+
+      <div class="Card Card-body MB-2">
+        <p>You might like!</p>
+        entities to fallow
+      </div>
+
+      <div class="Card Card-body MB-2">
+        <p>Trends for you!</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="W-100 D-flex Flex-row" style="min-height: 607px">
+  <header class="Bg-secondary Banner Flex-grow-1 D-flex Justify-content-end">
+    <div [style]="{width:Template.Left+ 'px'}">
+
+      <ul class="List List-flush py-2 px-2">
+        <li class="List-item">***</li>
+        <li class="List-item">
+          <i class="fas fa-home" [class.fa-2x]="Template.Left===88"></i>
+          @if (Template.Left > 88) {
+            <span class="MS-2">Home</span>
+          }
+        </li>
+        <li class="List-item">
+          <i class="fas fa-hashtag" [class.fa-2x]="Template.Left===88"></i>
+          @if (Template.Left > 88) {
+            <span class="MS-2">Explore</span>
+          }
+        </li>
+        <li class="List-item">
+          <i class="fas fa-user" [class.fa-2x]="Template.Left===88"></i>
+          @if (Template.Left > 88) {
+            <span class="MS-2">Profile</span>
+          }
+        </li>
+        <li class="List-item">
+          <i class="fas fa-ellipsis-h" [class.fa-2x]="Template.Left===88"></i>
+          @if (Template.Left > 88) {
+            <span class="MS-2">More</span>
+          }
+        </li>
+      </ul>
+
+    </div>
+  </header>
+  <main class="Flex-grow-1 Flex-shrink-1 F-flex Justify-content-start">
+
+    <div [style]="{width:Template.Right+ 'px'}">
+      <div class="Container-fluid PX-4">
+        <div class="Row">
+          <div class="Col-12 PY-2 PX-2">
+            <div class="Row">
+
+              <div class="Col-12 P-1" [ngClass]="Template.Right>600 ? 'Col-lg-8 Col-xl-7' : 'Col-lg-12'">
+
+                <div class="Card">
+                  <div class="Card-body"> This is some text within a card body.</div>
+                </div>
+                <div class="Card">
+                  <div class="Card-body"> Profile timelines / tabs</div>
+                </div>
+                <div class="Card MB-2">
+                  <div class="Card-body">
+                    Section: accessible-list
+                    <div>
+                      timelines ...
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="Col-12 P-1" [ngClass]="Template.Right>600 ? 'Col-lg-4 Col-xl-5' : 'D-none'">
+
+                <div class="Card MB-2">
+                  <div class="Card-body"> ...</div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+

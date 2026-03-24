@@ -1,0 +1,105 @@
+<div class="Container">
+  <div class="Row">
+
+    <div class="Col-12 Col-lg-8 P-1">
+
+      <app-user-card [IsWide]="true" [User]="User"></app-user-card>
+
+      <div class="Card Card-body MB-2">
+        <ul class="Nav Nav-tabs MB-1" id="myTab" role="tablist">
+          <li class="Nav-item" (click)="selectTab($event,'Home')">
+            <button class="Nav-link" [class.Active]="tab==='Home'" id="Home-tab" data-bs-toggle="tab" data-bs-target="#divHome" role="tab"
+               aria-controls="home" aria-selected="true">Home</button>
+          </li>
+          <li class="Nav-item" (click)="selectTab($event,'Detective')">
+            <button class="Nav-link" [class.Active]="tab==='Detective'" id="Detective-tab" data-bs-toggle="tab" data-bs-target="#divDetective" role="tab" aria-controls="Detective" aria-selected="false">Cases</button>
+          </li>
+          <li class="Nav-item" (click)="selectTab($event,'Columnist')">
+            <button class="Nav-link" [class.Active]="tab==='Columnist'" id="Columnist-tab" data-bs-toggle="tab" data-bs-target="#divColumnist" role="tab" aria-controls="Columnist" aria-selected="false">Articles</button>
+          </li>
+          <li class="Nav-item" (click)="selectTab($event,'Challenge')">
+            <button class="Nav-link" [class.Active]="tab==='Challenge'" id="Challenge-tab" data-bs-toggle="tab" data-bs-target="#divChallenge" role="tab" aria-controls="Challenge" aria-selected="false">Challenges</button>
+          </li>
+        </ul>
+
+        <div class="Tab-content" id="myTabContent">
+          <div class="Tab-pane Fade"
+               [class.Show]="tab==='Home'"
+               [class.Active]="tab==='Home'"
+               id="divHome" role="tabpanel" aria-labelledby="Home-tab">
+
+            <div class="Card Card-body MB-2">
+              <h5 class="Card-title">Purpose</h5>
+              <p>This is the profile page of all roles [Role.Commenter, Role.Columnist, Role.Detective]</p>
+            </div>
+
+          </div>
+          <div class="Tab-pane Fade"
+               [class.Show]="tab==='Detective'"
+               [class.Active]="tab==='Detective'"
+               id="divDetective" role="tabpanel" aria-labelledby="Detective-tab">
+
+            <p>detective works!</p>
+            investigations
+            <ul class="List List-flush">
+              <li class="List-item" [routerLink]="'/News/Detective/'+UniqueName+'/Case/'+1341332069201408001">
+                <h5>date</h5>
+                <h6>title</h6>
+                <p>short detail...</p>
+              </li>
+              <li class="List-item">
+                <h5>date</h5>
+                <h6>title</h6>
+                <p>short detail...</p>
+              </li>
+              <li class="List-item">
+                <h5>date</h5>
+                <h6>title</h6>
+                <p>short detail...</p>
+              </li>
+            </ul>
+
+          </div>
+          <div class="Tab-pane Fade"
+               [class.Show]="tab==='Columnist'"
+               [class.Active]="tab==='Columnist'"
+               id="divColumnist" role="tabpanel" aria-labelledby="Columnist-tab">
+
+            <h5 class=" ">Purpose</h5>
+            <p>This is the main page of Columnists. Their articles listed here. </p>
+            <p>this is side project, irrelevant from main purpose </p>
+            <p>articles</p>
+            <ul class="List List-flush">
+              <li class="List-item" [routerLink]="'/News/Columnist/'+UniqueName+'/Article/'+1341332069201408001">
+                <h5>date</h5>
+                <h6>title</h6>
+                <p>short detail...</p>
+              </li>
+              <li class="List-item">
+                <h5>date</h5>
+                <h6>title</h6>
+                <p>short detail...</p>
+              </li>
+              <li class="List-item">
+                <h5>date</h5>
+                <h6>title</h6>
+                <p>short detail...</p>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="Col-12 Col-lg-4 P-1">
+      <app-user-card [IsWide]="false" [User]="User"></app-user-card>
+
+      <div class="Card Card-body MB-2">
+        ...
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="Container">
+  <div class="Row">
+
+    <div class="Col-12 Col-lg-8 P-1">
+
+      <div class="Card MB-2">
+        <div class="Card-body">
+          <h4 class="Card-title">pics | name | time</h4>
+          case works!
+          <div class="Row">
+            <div class="Col-6 Bg-danger">
+              left
+              <br><br><br>
+              <br><br><br>
+            </div>
+            <div class="Col-6 Bg-info">
+              right
+              <br><br><br>
+              <br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Card MB-2">
+        <div class="Card-body">
+          <h6 class="Card-title" [routerLink]="'/News/Detective/'+Case.User.UniqueName">
+            <img class="Rounded-circle" width="50" [src]="Case.User.Avatar" [alt]="Case.User.Name">
+            &nbsp;<b>{{ Case.User.Name }}</b>
+            &nbsp;<span>{{ Case.CreatedAt|date }}</span>
+          </h6>
+          <h6 class="Card-title">{{ Case.Title }}</h6>
+
+          <div id="CarouselBasicExample" class="Carousel Slide Carousel-fade" data-ls-ride="Carousel">
+            <!-- Indicators -->
+            <div class="Carousel-indicators">
+              <button type="button" class="Active" aria-current="true" aria-label="Slide 1"
+                      data-ls-target="#CarouselBasicExample" data-ls-slide-to="0"></button>
+              <button type="button" aria-label="Slide 2"
+                      data-ls-target="#CarouselBasicExample" data-ls-slide-to="1"></button>
+            </div>
+
+            <!-- Inner -->
+            <div class="Carousel-inner">
+              @for (thesis of Case.Theses; track thesis) {
+                <div class="Carousel-item" [class.Active]="$last">
+                  <app-case-thesis [Thesis]="thesis"></app-case-thesis>
+                </div>
+              }
+            </div>
+            <!-- Inner -->
+
+            <!-- Controls -->
+            <button class="Carousel-control-prev" type="button" data-ls-target="#CarouselBasicExample"
+                    data-ls-slide="prev">
+              <span class="Carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="Visually-hidden">Previous</span>
+            </button>
+            <button class="Carousel-control-next" type="button" data-ls-target="#CarouselBasicExample"
+                    data-ls-slide="next">
+              <span class="Carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="Visually-hidden">Next</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <app-simple-poll (Result)="pollResult($event)" [Initial]="PollValues"></app-simple-poll>
+
+      <div class="Card MB-2">
+        <div class="Card-body">
+          <h4 class="Card-title">Comments</h4>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="Col-12 Col-lg-4 P-1">
+
+      <div class="Card Card-body MB-2">
+        <p>sign up!</p>
+      </div>
+
+      <div class="Card Card-body MB-2">
+        Relevant people to fallow
+      </div>
+
+      <div class="Card Card-body MB-2">
+        <p>Trends for you!</p>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+

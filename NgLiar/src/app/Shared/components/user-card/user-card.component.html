@@ -1,0 +1,37 @@
+@if (IsWide) {
+  <div class="Card shadow-lg MB-2">
+    <div class="Card-body">
+      <h5 class="Card-title">
+        <img class="Rounded-circle" width="50" [src]="User.Avatar" [alt]="User.Name">
+        &nbsp;<b>{{ User.Name }}</b>
+        <span class="MS-1 font-italic font-weight-normal">{{ User.UniqueName }}</span>
+      </h5>
+
+      <ul class="List List-horizontal">
+        @if (CheckType('Commenter')) {
+          <li class="List-item List-item-dark">Commenter</li>
+        }
+        @if (CheckType('Detective')) {
+          <li class="List-item List-item-success">Detective</li>
+        }
+        @if (CheckType('Columnist')) {
+          <li class="List-item List-item-info">Columnist</li>
+        }
+      </ul>
+
+      <p>editor-card works!</p>
+    </div>
+  </div>
+} @else {
+  <div class="Card user-card MB-2">
+    <div class="Card-img-block">
+      <img class="Card-img-top" [src]="User.Avatar" alt="Card image cap">
+    </div>
+    <div class="Card-body pt-0">
+      <h5 class="Card-title">{{ User.Name }}</h5>
+      <p class="Card-text"> {{ User.UniqueName }} Some quick example text to build on the card title and make up the
+        bulk of the card's content.</p>
+      <a href="#" class="Btn Btn-primary">Go somewhere</a>
+    </div>
+  </div>
+}

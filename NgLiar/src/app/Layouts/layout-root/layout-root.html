@@ -1,0 +1,57 @@
+<nav class="Navbar Navbar-expand-lg Navbar-dark Bg-dark Position-fixed Top-0 W-100" style="z-index: 1030;">
+  <div class="Container-fluid">
+    <a class="Navbar-brand" [routerLink]="['/Home']"
+       [routerLinkActive]="'Active'" [routerLinkActiveOptions]="{exact:false}">Home</a>
+    <button class="Navbar-toggler" type="button"
+            data-ls-toggle="collapse" data-ls-target="#navbarNav"
+            (click)="toggle=!toggle"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="Navbar-toggler-icon"></span>
+    </button>
+    <div class="Collapse Navbar-collapse" [class.Show]="toggle" id="navbarNavAltMarkup">
+      <div class="Navbar-nav ME-auto">
+        <a class="Nav-link" [routerLink]="['/News/TTNet']"
+           [routerLinkActive]="'Active'" [routerLinkActiveOptions]="{exact:false}">News Test</a>
+        <a class="Nav-link" [routerLink]="['/News/Columnist/abdullahciftcib']"
+           [routerLinkActive]="'Active'" [routerLinkActiveOptions]="{exact:false}">User Profile test</a>
+        <a class="Nav-link" [routerLink]="['/Headline']"
+           [routerLinkActive]="'Active'" [routerLinkActiveOptions]="{exact:false}">Headline</a>
+        <a class="Nav-link" [routerLink]="['/Challenge']"
+           [routerLinkActive]="'Active'" [routerLinkActiveOptions]="{exact:false}">Challenge</a>
+      </div>
+
+      <ul class="Nav Navbar-nav Nav-flex-icons MS-auto">
+
+        <li class="Nav-item" routerLinkActive="Active">
+          <a [routerLink]="['/Home/Contact']" class="Nav-link">
+            <i class="fas fa-envelope"></i><span class="SR-only">Contact us</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="Container-fluid" style="margin-top: 60px; min-height: 750px !important;">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="Align-bottom Bg-dark MT-3">
+  <div class="Container">
+
+    <div class="P-3 Fg-white">
+      Created with ♥ by Me {{ currentYear }}. Made with <a href="http://www.google.com" target="_blank">WebStorm.</a>
+
+      <p class="Float-right H6">
+        <a href="#"><i class="mr-2 fab fa-github "></i></a>
+        <a href="#"><i class="mr-2 fab fa-facebook-f  "></i></a>
+        <a href="#"><i class="mr-2 fab fa-twitter  "></i></a>
+        <a href="#"><i class="mr-2 fab fa-linkedin  "></i></a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+

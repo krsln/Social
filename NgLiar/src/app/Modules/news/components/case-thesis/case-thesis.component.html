@@ -1,0 +1,19 @@
+<!--<div class="Position-relative MB-2 Border Bc-dark">-->
+<!--  @if (Type === 'Image') {-->
+<!--    <img class="Img-fluid" [src]="Thesis.Content" [alt]="Proposition">-->
+<!--  }-->
+<!--  <div class="Position-absolute" style="top:0; right: 0">-->
+<!--    <h3><span class="Badge Rounded-pill FG-white M-1"-->
+<!--              [class.Bg-danger]="Proposition==='Falsity'"-->
+<!--              [class.Bg-success]="Proposition==='Truth'">{{ Proposition }}</span></h3>-->
+<!--  </div>-->
+<!--  {{ Type }}-->
+<!--</div>-->
+@if (Type === 'Image') {
+  <img class="D-block W-100" [src]="Thesis.Content" [alt]="Proposition">
+}
+<div class="Carousel-caption D-none D-md-block">
+    <h3><span class="Badge Rounded-pill FG-white M-1"
+              [class.Bg-danger]="Proposition==='Falsity'"
+              [class.Bg-success]="Proposition==='Truth'">{{ Proposition }}</span></h3>
+</div>

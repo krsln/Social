@@ -1,0 +1,50 @@
+<div class="Card MB-2">
+  <div class="Card-body">
+    <h4 class="Card-title">Simple Poll <i class="fas fa-poll"></i></h4>
+    <p>Do you think this post is correct?</p>
+
+    <div class="Progress MB-1">
+      <div class="Progress-bar Bg-success" role="progressbar"
+           [style]="{width:Percentage.Yes+'%'}"
+           [attr.aria-valuenow]="{width:Percentage.Yes}"
+           aria-valuemin="0" aria-valuemax="100">{{Percentage.Yes + '%'}}</div>
+      <div class="Progress-bar Bg-secondary" role="progressbar"
+           [style]="{width:Percentage.Neutral+'%'}"
+           [attr.aria-valuenow]="{width:Percentage.Neutral}"
+           aria-valuemin="0" aria-valuemax="100">{{Percentage.Neutral + '%'}}</div>
+      <div class="Progress-bar Bg-danger" role="progressbar"
+           [style]="{width:Percentage.No+'%'}"
+           [attr.aria-valuenow]="{width:Percentage.No}"
+           aria-valuemin="0" aria-valuemax="100">{{Percentage.No + '%'}}</div>
+    </div>
+
+    <ul class="List List-horizontal MB-2">
+      <li class="List-item Fg-success" style="cursor: pointer;" (click)="onClick('Yes')"><i
+        class="fas fa-2x fa-thumbs-up"></i></li>
+      <li class="List-item Fg-secondary" style="cursor: pointer;" (click)="onClick('Neutral')"><i
+        class="far fa-2x fa-meh"></i></li>
+      <li class="List-item Fg-danger" style="cursor: pointer;" (click)="onClick('No')"><i
+        class="fas fa-2x fa-thumbs-down"></i></li>
+      <li>Total Votes: {{Tally.Total}}</li>
+    </ul>
+
+    <div class="Progress MB-1">
+      <div class="Progress-bar Progress-bar-striped Progress-bar-animated Bg-success" role="progressbar"
+           [style]="{width:Percentage.Yes+'%'}"
+           [attr.aria-valuenow]="{width:Percentage.Yes}"
+           aria-valuemin="0" aria-valuemax="100">{{Percentage.Yes + '%'}}</div>
+    </div>
+    <div class="Progress MB-1">
+      <div class="Progress-bar Progress-bar-striped Progress-bar-animated Bg-secondary" role="progressbar"
+           [style]="{width:Percentage.Neutral+'%'}"
+           [attr.aria-valuenow]="{width:Percentage.Neutral}"
+           aria-valuemin="0" aria-valuemax="100">{{Percentage.Neutral + '%'}}</div>
+    </div>
+    <div class="Progress MB-1">
+      <div class="Progress-bar Progress-bar-striped Progress-bar-animated Bg-danger" role="progressbar"
+           [style]="{width:Percentage.No+'%'}"
+           [attr.aria-valuenow]="{width:Percentage.No}"
+           aria-valuemin="0" aria-valuemax="100">{{Percentage.No + '%'}}</div>
+    </div>
+  </div>
+</div>
